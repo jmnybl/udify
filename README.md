@@ -2,6 +2,12 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+Changes by @jmnybl:
+- Support for using Finnish BERT model ([FinBERT](https://github.com/TurkuNLP/FinBERT))
+- Support for using uncased BERT models
+- Removed some hard coded models and paths to prevent accidental usage
+- Added a config file for training a model for Finnish-TDT using FinBERT
+
 UDify is a single model that parses Universal Dependencies (UPOS, UFeats, Lemmas, Deps) jointly, accepting any of 75 
 supported languages as input (trained on UD v2.3 with 124 treebanks). This repository accompanies the paper, 
 "[75 Languages, 1 Model: Parsing Universal Dependencies Universally](https://arxiv.org/abs/1904.02099)," 

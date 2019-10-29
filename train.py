@@ -84,7 +84,7 @@ if dev_file != test_file:
 util.predict_and_evaluate_model(args.predictor, predict_params, serialization_dir, test_file, test_pred, test_eval)
 
 if args.archive_bert:
-    bert_config = "config/archive/bert-base-multilingual-cased/bert_config.json"
+    bert_config = "config/archive/bert-base-multilingual-cased/bert_config.json" # TODO: this needs to be changed if archive is used!
     util.archive_bert_model(serialization_dir, bert_config)
 
 util.cleanup_training(serialization_dir, keep_archive=not args.cleanup_archive)

@@ -35,6 +35,8 @@ class UdifyModel(Model):
                  text_field_embedder: TextFieldEmbedder,
                  encoder: Seq2SeqEncoder,
                  decoders: Dict[str, Model],
+                 bert_vocab: str = None,
+                 do_lowercase: bool = None,
                  post_encoder_embedder: TextFieldEmbedder = None,
                  dropout: float = 0.0,
                  word_dropout: float = 0.0,
@@ -46,7 +48,8 @@ class UdifyModel(Model):
 
         self.tasks = sorted(tasks)
         self.vocab = vocab
-        self.bert_vocab = BertTokenizer.from_pretrained("config/archive/bert-base-multilingual-cased/vocab.txt").vocab
+        #self.bert_vocab = BertTokenizer.from_pretrained("config/archive/bert-base-multilingual-cased/vocab.txt").vocab
+        self.bert_vocab = BertTokenizer.from_pretrained(bert_vocab, do_lower_case=do_lowercase).vocab
         self.text_field_embedder = text_field_embedder
         self.post_encoder_embedder = post_encoder_embedder
         self.shared_encoder = encoder

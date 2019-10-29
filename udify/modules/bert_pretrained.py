@@ -5,6 +5,7 @@ a sliding window approach for long sentences.
 
 from typing import Dict, List, Callable, Tuple
 import logging
+import unicodedata
 
 from overrides import overrides
 
@@ -29,6 +30,18 @@ logger = logging.getLogger(__name__)
 
 # This is the default list of tokens that should not be lowercased.
 _NEVER_LOWERCASE = ['[UNK]', '[SEP]', '[PAD]', '[CLS]', '[MASK]']
+
+
+import pytorch_pretrained_bert
+
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-finnish-cased"]="http://dl.turkunlp.org/finbert/pytorch-pretrained-bert/bert-base-finnish-cased/bert-base-finnish-cased.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-finnish-uncased"]="http://dl.turkunlp.org/finbert/pytorch-pretrained-bert/bert-base-finnish-uncased/bert-base-finnish-uncased.tar.gz"
+
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-finnish-cased"]="http://dl.turkunlp.org/finbert/pytorch-pretrained-bert/bert-base-finnish-cased/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-finnish-uncased"]="http://dl.turkunlp.org/finbert/pytorch-pretrained-bert/bert-base-finnish-uncased/vocab.txt"
+
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-finnish-cased"]=512
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-finnish-uncased"]=512
 
 
 class WordpieceIndexer(TokenIndexer[int]):
@@ -132,6 +145,19 @@ class WordpieceIndexer(TokenIndexer[int]):
             vocabulary._token_to_index[self._namespace][word] = idx
             vocabulary._index_to_token[self._namespace][idx] = word
 
+    # copy from pytorch_pretrained_bert
+    def _run_strip_accents(self, text):
+        """Strips accents from a piece of text."""
+        text = unicodedata.normalize("NFD", text)
+        output = []
+        for char in text:
+            cat = unicodedata.category(char)
+            if cat == "Mn":
+                continue
+            output.append(char)
+        return "".join(output)
+
+
     @overrides
     def tokens_to_indices(self,
                           tokens: List[Token],
@@ -142,7 +168,7 @@ class WordpieceIndexer(TokenIndexer[int]):
             self._added_to_vocabulary = True
 
         # This lowercases tokens if necessary
-        text = (token.text.lower()
+        text = (self._run_strip_accents(token.text.lower())
                 if self._do_lowercase and token.text not in self._never_lowercase
                 else token.text
                 for token in tokens)

@@ -37,7 +37,7 @@ where treebank must be one of the supported treebanks in `config/ud/iwpt2020/`. 
 
 Cached BERT models:
 
-You may consider removing cached BERT models before training on puhti in order to avoid using old BERT versions by mistake. My cached models seems to be here: `/users/jmnybl/.pytorch_pretrained_bert/` on puhti. 
+You may consider removing cached BERT models before training on puhti in order to avoid using old BERT versions by mistake. My cached models seem to be here: `/users/jmnybl/.pytorch_pretrained_bert/` on puhti. 
 
 
 ## Main documentation

@@ -2,6 +2,44 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+## IWPT 2020
+
+Training instructions:
+
+Code and environment (puhti.csc.fi):
+
+```
+git clone git@github.com:jmnybl/udify.git
+cd udify
+git checkout iwpt2020
+
+module load python-data/3.7.3-1
+python3 -m venv venv-udify
+source venv-udify/bin/activate
+pip install -r requirements.txt
+
+```
+
+Getting data:
+
+```
+wget http://dl.turkunlp.org/iwpt2020/ud-data/iwpt2020-train-dev-modified.tgz
+tar zxvf iwpt2020-train-dev-modified.tgz
+```
+
+Training:
+
+```
+sbatch -J jobname -o log.out -e log.err train_puhti.sh treebank modelname
+```
+
+where treebank must be one of the supported treebanks in `config/ud/iwpt2020/`. The model will be saved under the `logs/modelname` directory.
+
+/users/jmnybl/.pytorch_pretrained_bert/
+
+
+## Main documentation
+
 Changes by @jmnybl:
 - Support for using Finnish BERT model ([FinBERT](https://github.com/TurkuNLP/FinBERT))
 - Support for using uncased BERT models

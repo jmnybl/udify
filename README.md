@@ -35,7 +35,9 @@ sbatch -J jobname -o log.out -e log.err train_puhti.sh treebank modelname
 
 where treebank must be one of the supported treebanks in `config/ud/iwpt2020/`. The model will be saved under the `logs/modelname` directory.
 
-/users/jmnybl/.pytorch_pretrained_bert/
+Cached BERT models:
+
+You may consider removing cached BERT models before training on puhti in order to avoid using old BERT versions by mistake. My cached models seems to be here: `/users/jmnybl/.pytorch_pretrained_bert/` on puhti. 
 
 
 ## Main documentation

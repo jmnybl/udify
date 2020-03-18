@@ -50,18 +50,36 @@ pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-cs-case
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-et-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-et-cased/bert-base-et-cased.tar.gz"
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-fi-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-fi-cased/bert-base-fi-cased.tar.gz"
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-lt-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-lt-cased/bert-base-lt-cased.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-lv-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-lv-cased/bert-base-lv-cased.tar.gz"
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-pl-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-pl-cased/bert-base-pl-cased.tar.gz"
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-sk-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-sk-cased/bert-base-sk-cased.tar.gz"
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-uk-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-uk-cased/bert-base-uk-cased.tar.gz"
+
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-ar-asafaya"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-ar-asafaya/bert-base-ar-asafaya.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-fr-camembert-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-fr-camembert-cased/bert-base-fr-camembert-cased.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-it-dbmdz-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-it-dbmdz-cased/bert-base-it-dbmdz-cased.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-nl-bertje-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-nl-bertje-cased/bert-base-nl-bertje-cased.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-ru-rubert-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-ru-rubert-cased/bert-base-ru-rubert-cased.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-sv-kungbib-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-sv-kungbib-cased/bert-base-sv-kungbib-cased.tar.gz"
+pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-en-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-en-cased/bert-base-en-cased.tar.gz"
 
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-bg-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-bg-cased/vocab.txt"
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-cs-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-cs-cased/vocab.txt"
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-et-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-et-cased/vocab.txt"
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-fi-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-fi-cased/vocab.txt"
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-lt-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-lt-cased/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-lv-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-lv-cased/vocab.txt"
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-pl-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-pl-cased/vocab.txt"
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-sk-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-sk-cased/vocab.txt"
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-uk-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-uk-cased/vocab.txt"
+
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-ar-asafaya"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-ar-asafaya/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-fr-camembert-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-fr-camembert-cased/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-it-dbmdz-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-it-dbmdz-cased/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-nl-bertje-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-nl-bertje-cased/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-ru-rubert-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-ru-rubert-cased/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-sv-kungbib-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-sv-kungbib-cased/vocab.txt"
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP["bert-base-en-cased"]="http://dl.turkunlp.org/iwpt2020/berts/bert-base-en-cased/vocab.txt"
 
 
 
@@ -70,9 +88,18 @@ pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-et-cased"]=128
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-fi-cased"]=128
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-lt-cased"]=128
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-lv-cased"]=128
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-pl-cased"]=128
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-sk-cased"]=128
 pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-uk-cased"]=128
+
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-ar-asafaya"]=512
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-fr-camembert-cased"]=512 # config says 514?
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-it-dbmdz-cased"]=512
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-nl-bertje-cased"]=512
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-ru-rubert-cased"]=512
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-sv-kungbib-cased"]=512
+pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP["bert-base-en-cased"]=512
 
 class WordpieceIndexer(TokenIndexer[int]):
     """

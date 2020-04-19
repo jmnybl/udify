@@ -58,7 +58,7 @@ def merge_configs(configs: List[Params]) -> Params:
     return configs[0]
 
 
-def cache_vocab(params: Params, vocab_config_path: str = None):
+def cache_vocab(params: Params, vocab_config_path: str = None, replace_vocab: bool = False):
     """
     Caches the vocabulary given in the Params to the filesystem. Useful for large datasets that are run repeatedly.
     :param params: the AllenNLP Params
@@ -70,8 +70,13 @@ def cache_vocab(params: Params, vocab_config_path: str = None):
     vocab_path = params["vocabulary"]["directory_path"]
 
     if os.path.exists(vocab_path):
-        if os.listdir(vocab_path):
+        if os.listdir(vocab_path) and replace_vocab==False:
+            logger.warning(f"WARNING! Using cached vocabulary!")
             return
+        else:
+            files = glob.glob(os.path.join(vocab_path, "*.txt"))
+            for f in files:
+                os.remove(f)
 
         # Remove empty vocabulary directory to make AllenNLP happy
         try:

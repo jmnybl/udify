@@ -19,5 +19,6 @@ module load python-data/3.7.3-1
 source venv-udify/bin/activate
 
 export TMPDIR=$LOCAL_SCRATCH
+export PYTORCH_PRETRAINED_BERT_CACHE="/scratch/project_2000539/jenna/bert_cache"
 
 python train.py --config config/ud/iwpt2020/$treebank.json --name $modelname --replace_vocab

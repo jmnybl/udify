@@ -96,9 +96,12 @@ class TagDecoder(Model):
             # "acc3": CategoricalAccuracy(top_k=3)
         }
 
+        adaptive_cutoffs = [round(self.num_classes / 15), 3 * round(self.num_classes / 15)]
+        if 0 in adaptive_cutoffs:
+            # cutoffs should by between 1 and n_classes-1
+            self.adaptive = False
+
         if self.adaptive:
-            # TODO
-            adaptive_cutoffs = [round(self.num_classes / 15), 3 * round(self.num_classes / 15)]
             self.task_output = AdaptiveLogSoftmaxWithLoss(self.output_dim,
                                                           self.num_classes,
                                                           cutoffs=adaptive_cutoffs,

@@ -34,6 +34,14 @@ _NEVER_LOWERCASE = ['[UNK]', '[SEP]', '[PAD]', '[CLS]', '[MASK]']
 
 import pytorch_pretrained_bert
 
+
+# WikiBERT paper config
+for l in ['af', 'ar', 'be', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'es', 'et', 'eu', 'fa', 'fi', 'fr', 'ga', 'gl', 'he', 'hi', 'hr', 'hu', 'hy', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nl', 'no', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'ta', 'tr', 'uk', 'ur', 'vi']:
+    pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP['wikibert-base-{}-cased'.format(l)]='http://dl.turkunlp.org/wikibert/wikibert-base-{}-cased/wikibert-base-{}-cased.tar.gz'.format(l, l)
+    pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_ARCHIVE_MAP['wikibert-base-{}-cased'.format(l)]='http://dl.turkunlp.org/wikibert/wikibert-base-{}-cased/vocab.txt'.format(l)
+    pytorch_pretrained_bert.tokenization.PRETRAINED_VOCAB_POSITIONAL_EMBEDDINGS_SIZE_MAP['wikibert-base-{}-cased'.format(l)]=512
+
+
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-finnish-cased"]="http://dl.turkunlp.org/finbert/pytorch-pretrained-bert/bert-base-finnish-cased/bert-base-finnish-cased-v1.tar.gz"
 pytorch_pretrained_bert.modeling.PRETRAINED_MODEL_ARCHIVE_MAP["bert-base-finnish-uncased"]="http://dl.turkunlp.org/finbert/pytorch-pretrained-bert/bert-base-finnish-uncased/bert-base-finnish-uncased.tar.gz"
 
